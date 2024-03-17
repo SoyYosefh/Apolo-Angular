@@ -1,1 +1,142 @@
-<p>chatbot works!</p>,
+<!-- component -->
+<div class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
+    <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+        <div class="relative flex items-center space-x-4">
+            <div class="relative">
+                <span class="absolute text-green-500 right-0 bottom-0">
+                    <svg width="20" height="20">
+                        <circle cx="8" cy="8" r="8" fill="currentColor"></circle>
+                    </svg>
+                </span>
+                <img src="/assets/images/avatar_apolosfondo.png" alt="" class="w-10 sm:w-16 h-10 sm:h-16 rounded-full">
+            </div>
+            <div class="flex flex-col leading-tight">
+                <div class="text-2xl mt-1 flex items-center">
+                    <span class="text-gray-700 mr-3">APOLO</span>
+                </div>
+                <span class="text-lg text-gray-600">Chatbot</span>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2">
+            <button type="button"
+                class="inline-flex items-center justify-center rounded-lg border h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="messages"
+        class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
+        <!-- Persona -->
+        <div class="chat-message">
+            <div class="flex items-end justify-end">
+                <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
+                    <div>
+                        <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white ">
+                            Hola!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ChatBot -->
+        <div class="chat-message">
+            <div class="flex items-end">
+                <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
+                    <div>
+                        <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
+                            Hola, soy Apolo, en que te puedo ayudar?
+                        </span>
+                    </div>
+                    <div>
+                        <div class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
+                            <img src="/assets/images/BOT.jpg" alt="">
+                            <div class="mt-6 flex flex-row justify-center items-center">
+                                <button class="p-4 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none mx-4">
+                                    <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-6 h-6 text-gray-600"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M2 6C2 4.11438 2 3.17157 2.58579 2.58579C3.17157 2 4.11438 2 6 2C7.88562 2 8.82843 2 9.41421 2.58579C10 3.17157 10 4.11438 10 6V18C10 19.8856 10 20.8284 9.41421 21.4142C8.82843 22 7.88562 22 6 22C4.11438 22 3.17157 22 2.58579 21.4142C2 20.8284 2 19.8856 2 18V6Z"
+                                                fill="#000000"></path>
+                                            <path
+                                                d="M14 6C14 4.11438 14 3.17157 14.5858 2.58579C15.1716 2 16.1144 2 18 2C19.8856 2 20.8284 2 21.4142 2.58579C22 3.17157 22 4.11438 22 6V18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22C16.1144 22 15.1716 22 14.5858 21.4142C14 20.8284 14 19.8856 14 18V6Z"
+                                                fill="#000000"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div class="bg-gray-200 h-2 rounded-full w-full ">
+                                    <div class="bg-teal-500 h-2 rounded-full w-1/2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
+        <div class="relative flex">
+            <span class="absolute inset-y-0 flex items-center">
+                <button type="button"
+                    class="inline-flex items-center justify-center rounded-full h-12 w-12 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="h-6 w-6 text-gray-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                        </path>
+                    </svg>
+                </button>
+            </span>
+            <input type="text" placeholder="Escribe un mensaje..."
+                class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-md py-3">
+            <div class="absolute right-0 items-center inset-y-0 hidden sm:flex">
+                <button type="button"
+                    class="inline-flex items-center justify-center rounded-lg px-4 py-3 transition duration-500 ease-in-out text-white bg-blue-500 hover:bg-blue-400 focus:outline-none">
+                    <span class="font-bold">Enviar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                        class="h-6 w-6 ml-2 transform rotate-90">
+                        <path
+                            d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .scrollbar-w-2::-webkit-scrollbar {
+        width: 0.25rem;
+        height: 0.25rem;
+    }
+
+    .scrollbar-track-blue-lighter::-webkit-scrollbar-track {
+        --bg-opacity: 1;
+        background-color: #f7fafc;
+        background-color: rgba(247, 250, 252, var(--bg-opacity));
+    }
+
+    .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
+        --bg-opacity: 1;
+        background-color: #edf2f7;
+        background-color: rgba(237, 242, 247, var(--bg-opacity));
+    }
+
+    .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+        border-radius: 0.25rem;
+    }
+</style>
+
+<script>
+    const el = document.getElementById('messages')
+    el.scrollTop = el.scrollHeight
+</script>
