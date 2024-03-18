@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-footer',
   standalone: true,
   imports: [
-    RouterModule,
+    CommonModule,
   ],
-  templateUrl: './register.component.html',
+  templateUrl: './footer.component.html',
   styles: `
     :host {
       display: block;
@@ -16,4 +15,4 @@ import { RouterModule } from '@angular/router';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class RegisterComponent { }
+export class FooterComponent { }
